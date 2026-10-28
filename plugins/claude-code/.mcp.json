@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "backseat": {
+      "command": "backseat",
+      "args": ["mcp"],
+      "env": { "BACKSEAT_AGENT": "Claude" }
+    }
+  }
+}

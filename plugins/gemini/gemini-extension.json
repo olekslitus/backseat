@@ -1,0 +1,13 @@
+{
+  "name": "backseat",
+  "version": "0.1.0",
+  "description": "Ask before Gemini takes over your Mac's mouse and keyboard, and show it while it does (needs Backseat.app).",
+  "mcpServers": {
+    "backseat": {
+      "command": "backseat",
+      "args": ["mcp"],
+      "env": { "BACKSEAT_AGENT": "Gemini" }
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}

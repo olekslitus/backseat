@@ -1,0 +1,12 @@
+{
+  "name": "backseat",
+  "owner": { "name": "Oleksandr Litus" },
+  "metadata": { "description": "Backseat: ask before an AI agent takes over your Mac, and show it while it does." },
+  "plugins": [
+    {
+      "name": "backseat",
+      "source": "./plugins/claude-code",
+      "description": "Ask before Claude takes over your Mac's mouse and keyboard, and show it while it does."
+    }
+  ]
+}

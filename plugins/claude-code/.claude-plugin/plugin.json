@@ -1,0 +1,11 @@
+{
+  "name": "backseat",
+  "version": "0.1.0",
+  "description": "Ask before Claude takes over your Mac's mouse and keyboard, and show it while it does (needs Backseat.app).",
+  "author": {
+    "name": "Oleksandr Litus"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/olekslitus/backseat",
+  "repository": "https://github.com/olekslitus/backseat"
+}

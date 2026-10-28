@@ -1,0 +1,20 @@
+---
+description: Ask with Backseat before controlling the Mac GUI
+alwaysApply: true
+---
+
+# Using the Mac's GUI: ask with Backseat first
+
+The user runs Backseat, which asks them before an agent takes over their mouse, keyboard or screen.
+
+1. **Before any GUI automation** (computer use, clicking, typing, AppleScript/System Events, moving windows,
+   screenshots that need an app in front), call the `request_control` tool from the `backseat` MCP server with a short
+   `task`, for example "Checking the export dialog in Final Cut". Without MCP, run `backseat start "<task>"`.
+   - `allowed` (exit 0): go ahead.
+   - `denied` (exit 4): don't touch the GUI. Tell the user and ask how to continue.
+   - `error` (exit 5): Backseat isn't running. Don't touch the GUI; tell the user.
+2. **Before each GUI action**, call `check_control` (or `backseat check`). If it returns `stop` (exit 3), the user took
+   back control: stop immediately and tell them. If it returns `inactive`, request control again.
+3. **When you're done**, call `release_control` (or `backseat stop`) right away, even if the task failed.
+
+Keep each control session short, and never keep going after a `stop`.
